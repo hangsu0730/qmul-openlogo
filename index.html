@@ -3,16 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>QMUL-SurvFace</title>
-      <meta name="description" content="To facilitate more studies on developing face recognition models that are effective and robust 
-         for low-resolution surveillance facial images, we introduce a new Surveillance Face Recognition Challenge, 
-         which we call the QMUL-SurvFace benchmark. 
-         This new benchmark is the largest and more importantly the only true surveillance face recognition benchmark 
-         to our best knowledge, where low-resolution images are not synthesised by artificial down-sampling 
-         of native high-resolution images. This challenge contains 463,507 face images of 15,573 distinct identities 
-         captured in real-world uncooperative surveillance scenes over wide space and time. 
-         Face recognition is generally more difficult in an open-set setting which is typical for surveillance scenarios, 
-         owing to a large number of non-target people (distractors) appearing open spaced scenes.">
+      <title>QMUL-OpenLogo</title>
+      <meta name="description" content="For enabling a larger scale logo detection model exploration, and collect a large 
+					number of logo classes for simulating the real-world logo detection at scales,
+					we propose to re-exploit the existing logo detection datasets.
+         To maximise the context richness of logo images,
+we assemble 7 existing publicly accessible logo detection datasets (Table \ref{tab:dataset}) sourced from diverse domains
+to establish the OpenLogo evaluation benchmark. 
+All these datasets together present significant 
+logo variations and therefore represent the truthful logo detection challenge
+as encountered in real-world unconstrained deployments.
+We only used the test data of WebLogo-2M
+\cite{su2017weblogo} since its training data are
+noisy without labelled object bounding boxes which are
+required for model performance evaluation.">
       <meta name="keywords" content="QMUL SurvFace; 
          QMUL Surveillance Face Recognition Challenge; QMUL Surveillance Face Challenge;
          QMUL Surveillance Face Recognition Benchmark; QMUL Surveillance Face Benchmark;
