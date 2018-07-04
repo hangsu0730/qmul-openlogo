@@ -4,15 +4,30 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>QMUL-OpenLogo</title>
-      <meta name="description" content="For enabling a larger scale logo detection model exploration, and collect a large 
-					number of logo classes for simulating the real-world logo detection at scales,
-					we propose to re-exploit the existing logo detection datasets.
-         To maximise the context richness of logo images,
-we assemble 7 existing publicly accessible logo detection datasets (Table \ref{tab:dataset}) sourced from diverse domains
-to establish the OpenLogo evaluation benchmark. 
-All these datasets together present significant 
-logo variations and therefore represent the truthful logo detection challenge
-as encountered in real-world unconstrained deployments. Result in a OpenLogo dataset with 27083 images of 352 classes.">
+      <meta name="description" content="Existing logo detection benchmarks consider 
+            artificial deployment scenarios by assuming
+            that large training data with fine-grained bounding box annotations 
+            for each class are available for model training.
+            Such assumptions are often invalid in realistic logo detection scenarios where 
+            new logo classes come progressively and require to be detected
+            with little or none budget for exhaustively labelling fine-grained training data 
+            for every new class.
+            Existing benchmarks are thus
+            unable to evaluate the true performance of a logo detection method 
+            in realistic and open deployments.
+            In this work, we introduce a more realistic
+            and challenging logo detection setting, called <b>Open Logo Detection</b>. 
+            Specifically,
+            this new setting assumes fine-grained labelling only on 
+            a small proportion of logo classes whilst the remaining classes
+            have no labelled training data to simulate the
+            open deployment.
+            Further, 
+            we create an open logo detection benchmark, called <b>QMUL-OpenLogo</b>,
+            to promote the investigation of this new challenge.
+            QMUL-OpenLogo contains 27,189 images from 309 logo classes,
+            built by aggregating and refining 7 existing datasets
+            and establishing an open logo detection evaluation protocol.">
       <meta name="keywords" content="QMUL; 
          QMUL OpenLogo Dataset; OpenLogo;
          logo recognition; logo detection; 
@@ -29,62 +44,75 @@ as encountered in real-world unconstrained deployments. Result in a OpenLogo dat
    </head>
    <body>
       <div id="content">
-         <div id="content-inner">
-            <div class="section head">
-               <p>
-               <h1 id="OpenLogo Dataset">QMUL-OpenLogo Dataset</h1>
-               </p>
-               <div class="affiliations">
-                  <p><a href="http://www.eecs.qmul.ac.uk/~hs308/">Hang Su</a> &nbsp; &nbsp; &nbsp; &nbsp;
-                     <a href="http://www.eecs.qmul.ac.uk/~xiatian/">Xiatian Zhu</a> &nbsp; &nbsp; &nbsp; &nbsp;
-                     <a href="http://www.eecs.qmul.ac.uk/~sgg/">Shaogang Gong</a>
-                  <p><a href="http://vision.eecs.qmul.ac.uk/">Computer Vision Group,  </a >
-                     <a href="http://www.eecs.qmul.ac.uk/">School of Electronic Engineering and Computer Science,  </a >
-                     <a href="http://www.qmul.ac.uk/">Queen Mary University of London</a >
-               </div>
-               <ul id="tabs">
-                  <li><a href="https://qmul-survface.github.io/index.html" name="#tab1" id="current">Home</a></li>
-                  <!-- <li><a href="https://qmul-survface.github.io/protocols.html" name="#tab2">Protocols</a></li>-->
-                  <!-- <li><a href="https://qmul-survface.github.io/benchmark.html" name="#tab3">Leaderboard</a></li>-->
-               </ul>
-            </div>
-            <center><img style="width: 95%;" src="./CSS/img_combined3.jpg" alt="QMUL OpenLogo"></center>
-            <h2 id="description">Description</h2>
-            <p>For enabling a larger scale logo detection model exploration, and collect a large 
-					number of logo classes for simulating the real-world logo detection at scales,
-					we propose to re-exploit the existing logo detection datasets.
-         To maximise the context richness of logo images,
-we assemble 7 existing publicly accessible logo detection datasets (Table \ref{tab:dataset}) sourced from diverse domains
-to establish the OpenLogo evaluation benchmark. 
-All these datasets together present significant 
-logo variations and therefore represent the truthful logo detection challenge
-as encountered in real-world unconstrained deployments. Result in a OpenLogo dataset with 27083 images of 352 classes.
-            </p>
-	      
-	    <h2 id="description">Statistic</h2>
+      <div id="content-inner">
+         <div class="section head">
             <p>
-		<div class="tab">
-                  <table align="center" width="100%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
-                     <thead>
-                        <tr>
-                           <th>Classes</th>
-                           <th>Training</th>
-                           <th>Testing</th>
-                           <th>Total</th>
-                           
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>352</td>
-                           <td>18752</td>
-                           <td>8331</td>
-                           <td>27083</td>
-                        </tr>
-                      </tbody>
-                  </table>
+            <h1 id="OpenLogo Dataset">QMUL-OpenLogo: Open Logo Detection Challenge</h1>
             </p>
-	      
+            <div class="affiliations">
+               <p><a href="http://www.eecs.qmul.ac.uk/~hs308/">Hang Su</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                  <a href="http://www.eecs.qmul.ac.uk/~xiatian/">Xiatian Zhu</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                  <a href="http://www.eecs.qmul.ac.uk/~sgg/">Shaogang Gong</a>
+               <p><a href="http://vision.eecs.qmul.ac.uk/">Computer Vision Group,  </a >
+                  <a href="http://www.eecs.qmul.ac.uk/">School of Electronic Engineering and Computer Science,  </a >
+                  <a href="http://www.qmul.ac.uk/">Queen Mary University of London</a >
+            </div>
+            <ul id="tabs">
+               <li><a href="https://qmul-survface.github.io/index.html" name="#tab1" id="current">Home</a></li>
+               <!-- <li><a href="https://qmul-survface.github.io/protocols.html" name="#tab2">Protocols</a></li>-->
+               <!-- <li><a href="https://qmul-survface.github.io/benchmark.html" name="#tab3">Leaderboard</a></li>-->
+            </ul>
+         </div>
+         <center><img style="width: 95%;" src="./CSS/img_combined3.jpg" alt="QMUL OpenLogo"></center>
+         <h2 id="description">Description</h2>
+         <p>
+            Existing logo detection benchmarks consider 
+            artificial deployment scenarios by assuming
+            that large training data with fine-grained bounding box annotations 
+            for each class are available for model training.
+            Such assumptions are often invalid in realistic logo detection scenarios where 
+            new logo classes come progressively and require to be detected
+            with little or none budget for exhaustively labelling fine-grained training data 
+            for every new class.
+            Existing benchmarks are thus
+            unable to evaluate the true performance of a logo detection method 
+            in realistic and open deployments.
+            In this work, we introduce a more realistic
+            and challenging logo detection setting, called <b>Open Logo Detection</b>. 
+            Specifically,
+            this new setting assumes fine-grained labelling only on 
+            a small proportion of logo classes whilst the remaining classes
+            have no labelled training data to simulate the
+            open deployment.
+            Further, 
+            we create an open logo detection benchmark, called <b>QMUL-OpenLogo</b>,
+            to promote the investigation of this new challenge.
+            QMUL-OpenLogo contains 27,189 images from 309 logo classes,
+            built by aggregating and refining 7 existing datasets
+            and establishing an open logo detection evaluation protocol.
+         </p>
+         <h2 id="description">Statistic</h2>
+         <p>
+         <div class="tab">
+            <table align="center" width="100%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
+               <thead align="center">
+                  <tr>
+                     <th>Classes</th>
+                     <th>Training</th>
+                     <th>Testing</th>
+                     <th>Total</th>
+                  </tr>
+               </thead>
+               <tbody align="center">
+                  <tr>
+                     <td>352</td>
+                     <td>18752</td>
+                     <td>8331</td>
+                     <td>27083</td>
+                  </tr>
+               </tbody>
+            </table>
+            </p>
             <h2 id="news">News</h2>
             <p>
             <ul>
@@ -92,7 +120,8 @@ as encountered in real-world unconstrained deployments. Result in a OpenLogo dat
             </ul>
             </p>
             <h2 id="download">Download</h2>
-            <p>QMUL-OpenLogo Dataset (4.6GB): 
+            <p>
+               QMUL-OpenLogo Dataset (4.6 GB): 
                [<a href="https://drive.google.com/file/d/1wCiMUVNRnIhLtjODnQYdNB9_nu7G_m7T/view" target="_blank">Google Drive</a>] 
                <!-- [<a href="https://pan.baidu.com/s/1O55042SMxLYqBWdGGQ_4_g" target="_blank">Baidu Cloud</a>]-->
             </p>
@@ -100,35 +129,36 @@ as encountered in real-world unconstrained deployments. Result in a OpenLogo dat
             <pre>
 	    	<em>Open Logo Detection Challenge.</em>
 		Hang Su, Xiatian Zhu and Shaogang Gong.
+		In Proc. British Machine Vision Conference (BMVC), Northumbria, UK, September 2018.
 		<!-- arXiv:1804.09691, 2018. <a href="QMUL-SurvFace_bibtex.html">Bibtex</a> <a href="https://arxiv.org/pdf/1804.09691.pdf">Paper</a>-->
 	    </pre>
             <h2 id="Related Datasets">Related Datasets</h2>
-            <p>We list below the related datasets.</a></p>
             <ul>
                <li><a href="http://www.multimedia-computing.de/flickrlogos/">FlickrLogo-32</a>
                </li>
                <li><a href="http://image.ntua.gr/iva/datasets/flickr_logos/">Flickr Logo 27</a>
                </li>
-	       <li><a href="http://www.ivl.disco.unimib.it/activities/logo-recognition/">Logo32plus</a>
+               <li><a href="http://www.ivl.disco.unimib.it/activities/logo-recognition/">Logo32plus</a>
                </li>
-	       <li><a href="http://www-sop.inria.fr/members/Alexis.Joly/BelgaLogos/BelgaLogos.html">BelgaLogos</a>
-               </li>	       
-	       <li><a href="http://www.eecs.qmul.ac.uk/~hs308/WebLogo-2M.html/">WebLogo-2M</a>
+               <li><a href="http://www-sop.inria.fr/members/Alexis.Joly/BelgaLogos/BelgaLogos.html">BelgaLogos</a>
                </li>
-	       <li><a href="https://www.iosb.fraunhofer.de/servlet/is/78045/">Logos-in-the-wild</a>
+               <li><a href="http://www.eecs.qmul.ac.uk/~hs308/WebLogo-2M.html/">WebLogo-2M</a>
                </li>
-	       <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8237781">SportsLogo</a>
+               <li><a href="http://www.eecs.qmul.ac.uk/~hs308/qmul_toplogo10.html/">TopLogo10</a>
+               </li>
+               <li><a href="https://www.iosb.fraunhofer.de/servlet/is/78045/">Logos-In-The-Wild</a>
+               </li>
+               <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8237781">SportsLogo</a>
                </li>
             </ul>
             <h2 id="Licence">Licence</h2>
-            <p>Please notice that the QMUL-OpenLogo Dataset is made available for academic research purpose only. 
+            <p>Please notice that, the QMUL-OpenLogo Dataset is made available for academic research purpose only. 
                All the images were collected from the existing logo detection datasets, 
                and the copyright belongs to the original owners. 
             </p>
             <h2 id="contact">Contact</h2>
             <p>Please feel free to send any questions and/or comments to Hang Su at <strong>hang.su@qmul.ac.uk</strong></p>
-            </div>
-         
+         </div>
       </div>
    </body>
 </html>
