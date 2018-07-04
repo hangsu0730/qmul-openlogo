@@ -1,1 +1,1 @@
-# QMUL-OpenLogo
+# QMUL-OpenLogo: Open Logo Detection Challenge
