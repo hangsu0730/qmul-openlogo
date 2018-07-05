@@ -1,0 +1,6 @@
+@inproceedings{su2018open,
+  title={Open Logo Detection Challenge},
+  author={Su, Hang and Zhu, Xiatian and Gong, Shaogang},
+  booktitle={British Machine Vision Conference}
+  year={2018}
+}
