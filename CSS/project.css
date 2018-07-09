@@ -159,7 +159,7 @@ body{margin:20px auto;font-family:Arial;}
 
 .rightbox {
     float: right;
-    width: 40%;
+    width: 30%;
 }
 
 .clearfix::after {
