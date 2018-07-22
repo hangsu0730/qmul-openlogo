@@ -25,7 +25,7 @@
             Further, 
             we create an open logo detection benchmark, called <b>QMUL-OpenLogo</b>,
             to promote the investigation of this new challenge.
-            QMUL-OpenLogo contains 27,189 images from 309 logo classes,
+            QMUL-OpenLogo contains 27,083 images from 352 logo classes,
             built by aggregating and refining 7 existing datasets
             and establishing an open logo detection evaluation protocol.">
       <meta name="keywords" content="QMUL; 
@@ -92,6 +92,13 @@
             and establishing an open logo detection evaluation protocol.
          </p>
          <h2 id="description">Statistic as Fully Supervised Dataset</h2>
+	      <p>
+          For dataset training-evaluation split, we propose 2 kind of setting. The first one is the fully supervised setting,
+		      with every logo classes contains 70% of training split and 30% of evaluation split. The second setting 
+		      split the dataset into 32 supervised classes and 320 unsupervised classes, where the supervised contains
+		      real training split and evaluation split, while the unsupervised classes have no training split, only evaluation split.
+         </p>
+	 <h2 id="description">Fully Supervised Split</h2>
          <p>
          <div class="tab">
             <table align="center" width="80%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
@@ -115,7 +122,7 @@
             </table>
             </p>
 	      
-         <h2 id="description">Statistic as OpenLogo Semi-supervised Challenge</h2>
+         <h2 id="description">Semi-Supervised Split</h2>
          <p>
          <div class="tab">
             <table align="center" width="80%" style="margin: 0px auto;" class="justify" cellpadding="0" cellspacing="0">
@@ -171,7 +178,7 @@
                <!-- [<a href="https://pan.baidu.com/s/1O55042SMxLYqBWdGGQ_4_g" target="_blank">Baidu Cloud</a>]-->
             </p>
 	    <p>
-               Supplyment Imageset List for OpenLogo Unsupervised Challenge: 
+               Supplyment Imageset List for OpenLogo Semi-Supervised Challenge: 
                [<a href="https://drive.google.com/file/d/1jvPAik5mGziKsq4Qsgu7GhiLSWlEwDSQ/view" target="_blank">Google Drive</a>] 
                <!-- [<a href="https://pan.baidu.com/s/1O55042SMxLYqBWdGGQ_4_g" target="_blank">Baidu Cloud</a>]-->
             </p>
