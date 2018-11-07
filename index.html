@@ -96,7 +96,12 @@
           For dataset training-evaluation split, we propose 2 kind of setting. The first one is the fully supervised setting,
 		      with every logo classes contains 70% of training split and 30% of evaluation split. The second setting 
 		      split the dataset into 32 supervised classes and 320 unsupervised classes, where the supervised contains
-		      real training split and evaluation split, while the unsupervised classes have no training split, only evaluation split.
+		      real training split and evaluation split, while the unsupervised classes have no training split, only 
+		      evaluation split.
+		      
+		      Notification for Supervised/Unsupervised splitting: The dataset contains images of multi-instances 
+		      and multi-classes, thus some supervised set images may contain both supervised and unsupervised instances in it,
+		      it is recommendded to filter it for own useage.
          </p>
 	 <h2 id="description">Fully Supervised Split</h2>
          <p>
@@ -167,6 +172,9 @@
             </p>
             <h2 id="news">News</h2>
             <p>
+	    <ul>
+               <li><strong>Nov 7, 2018:</strong>  </li>
+            </ul>
             <ul>
                <li><strong>July 03, 2018:</strong> Dataset released. </li>
             </ul>
